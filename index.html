@@ -130,6 +130,83 @@
       font-size: 0.95rem;
     }
   }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  }
+
+  .service-item {
+    flex: 1 1 33.3333%;
+    background: #fff;
+    padding: 30px 25px;
+    border-right: 1px solid #d7dde6;
+    border-bottom: 1px solid #d7dde6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Remove right border on last item in each row */
+  .service-item:nth-child(3n) {
+    border-right: none;
+  }
+  /* Remove bottom border on last row */
+  .service-item:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+  
+  /* Hover animation */
+  .service-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 71, 171, 0.25);
+    transform: translateY(-6px);
+    background: #e9f0ff;
+  }
+  
+  .service-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #0047ab;
+  }
+  
+  .service-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .service-item {
+      flex: 1 1 50%;
+      border-right: 1px solid #d7dde6;
+    }
+    .service-item:nth-child(2n) {
+      border-right: none;
+    }
+    .service-item:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .service-item {
+      flex: 1 1 100%;
+      border-right: none !important;
+      border-bottom: 1px solid #d7dde6;
+    }
+    .service-item:last-child {
+      border-bottom: none;
+    }
+  }
 </style>
 </head>
 <body>
@@ -142,6 +219,54 @@
 <section class="hero" role="banner">
   <h1>How To Cancel Your fuboTV Subscription?</h1>
 </section>
+
+ <div class="services-container">
+    <div class="services-grid">
+      
+      <div class="service-item">
+        <div class="service-title">Access Your Account</div>
+        <div class="service-text">
+          Start by logging into your fuboTV account through their official website or app to manage your subscription settings.
+        </div>
+      </div>
+      
+      <div class="service-item">
+        <div class="service-title">Navigate to Subscription Settings</div>
+        <div class="service-text">
+          Find the "Subscription" or "Billing" tab in your account dashboard to view your current plan details and cancellation options.
+        </div>
+      </div>
+      
+      <div class="service-item">
+        <div class="service-title">Select Cancel Subscription</div>
+        <div class="service-text">
+          Click the "Cancel Subscription" button and carefully follow prompts to confirm your cancellation request.
+        </div>
+      </div>
+      
+      <div class="service-item">
+        <div class="service-title">Review Billing Cycle</div>
+        <div class="service-text">
+          Understand that your service usually remains active until the end of your current billing cycle even after cancellation.
+        </div>
+      </div>
+      
+      <div class="service-item">
+        <div class="service-title">Confirm Cancellation Email</div>
+        <div class="service-text">
+          Check your registered email inbox for a confirmation message verifying your subscription cancellation.
+        </div>
+      </div>
+      
+      <div class="service-item">
+        <div class="service-title">Contact Support if Needed</div>
+        <div class="service-text">
+          Reach out to fuboTV customer support if you face issues or unexpected charges after cancelling your subscription.
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 <main class="container" role="main">
   <p>
