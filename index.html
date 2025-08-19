@@ -263,31 +263,6 @@
     color: #444;
   }
 
-  /* Responsive for tablets */
-  @media (max-width: 900px) {
-    .benefit-item {
-      flex: 1 1 50%;
-      border-right: 1px solid #d7dde6;
-    }
-    .benefit-item:nth-child(2n) {
-      border-right: none;
-    }
-    .benefit-item:nth-last-child(-n+2) {
-      border-bottom: none;
-    }
-  }
-
-  /* Responsive for mobile */
-  @media (max-width: 600px) {
-    .benefit-item {
-      flex: 1 1 100%;
-      border-right: none !important;
-      border-bottom: 1px solid #d7dde6;
-    }
-    .benefit-item:last-child {
-      border-bottom: none;
-    }
-  }
   
   .faq-container {
     max-width: 1200px;
@@ -357,16 +332,19 @@
     padding-top: 10px;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .faq-item {
-      flex: 1 1 100%;
-      border-right: none !important;
-    }
-    .faq-item:nth-last-child(-n+2) {
-      border-bottom: 1px solid #ddd;
-    }
+ 
+   footer {
+    flex-shrink: 0;
+    background-color: #fff;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0047ab;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
   }
+
+ 
 </style>
 </head>
 <body>
@@ -613,6 +591,10 @@
 
   </div>
 </div>
+
+<footer role="contentinfo">
+  &copy; 2025 Cancel fuboTV Subscription Guide. All rights reserved.
+</footer>
 
 
 
