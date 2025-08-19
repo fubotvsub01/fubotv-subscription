@@ -207,6 +207,166 @@
       border-bottom: none;
     }
   }
+  
+  .benefits-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .benefit-item {
+    flex: 1 1 33.3333%;
+    padding: 30px 25px;
+    border-right: 1px solid #d7dde6;
+    border-bottom: 1px solid #d7dde6;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+  }
+
+  /* Remove right border for last item in each row */
+  .benefit-item:nth-child(3n) {
+    border-right: none;
+  }
+
+  /* Remove bottom border for last row */
+  .benefit-item:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+
+  /* Hover animation */
+  .benefit-item:hover {
+    background-color: #e9f3ff;
+    box-shadow: 0 14px 30px rgba(0, 71, 171, 0.25);
+    transform: translateY(-6px);
+  }
+
+  .benefit-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #0047ab;
+  }
+
+  .benefit-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Responsive for tablets */
+  @media (max-width: 900px) {
+    .benefit-item {
+      flex: 1 1 50%;
+      border-right: 1px solid #d7dde6;
+    }
+    .benefit-item:nth-child(2n) {
+      border-right: none;
+    }
+    .benefit-item:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+  }
+
+  /* Responsive for mobile */
+  @media (max-width: 600px) {
+    .benefit-item {
+      flex: 1 1 100%;
+      border-right: none !important;
+      border-bottom: 1px solid #d7dde6;
+    }
+    .benefit-item:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .faq-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .faq-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .faq-item {
+    flex: 1 1 50%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  /* Remove right border for last in each row */
+  .faq-item:nth-child(2n) {
+    border-right: none;
+  }
+  /* Remove bottom border for last two (bottom row) */
+  .faq-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .faq-item:hover {
+    background: #f0f6ff;
+  }
+
+  .question {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0047ab;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+  }
+  .faq-item.active .arrow {
+    transform: rotate(90deg);
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.95rem;
+    color: #444;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding-right: 10px;
+  }
+  .faq-item.active .answer {
+    max-height: 300px; /* enough to show content */
+    padding-top: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .faq-item {
+      flex: 1 1 100%;
+      border-right: none !important;
+    }
+    .faq-item:nth-last-child(-n+2) {
+      border-bottom: 1px solid #ddd;
+    }
+  }
 </style>
 </head>
 <body>
@@ -335,6 +495,155 @@
     Remember, cancelling your subscription doesn’t mean you cannot rejoin fuboTV in the future. You can always resubscribe if you want to enjoy live sports, entertainment, and more again.
   </p>
 </main>
+
+
+
+<section class="benefits-section" aria-label="Benefits of canceling fuboTV subscription">
+  <div class="benefits-grid">
+
+    <div class="benefit-item">
+      <div class="benefit-title">Flexible Subscription Management</div>
+      <div class="benefit-description">
+        Cancel your fuboTV subscription anytime without being locked into a contract or facing penalties.
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-title">Cost Savings</div>
+      <div class="benefit-description">
+        Avoid recurring charges by canceling your subscription when you no longer need the service.
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-title">Maintain Access Until Period Ends</div>
+      <div class="benefit-description">
+        Even after cancellation, you can continue watching fuboTV until the end of your current billing cycle.
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-title">Avoid Unwanted Auto-Renewals</div>
+      <div class="benefit-description">
+        Cancelling stops automatic subscription renewals, so you control when and if you want to continue.
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-title">Easy Reactivation</div>
+      <div class="benefit-description">
+        Resubscribe anytime with the same account details, so you never lose access to your preferences.
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-title">Customer Support Assistance</div>
+      <div class="benefit-description">
+        Get help from fuboTV’s customer service if you encounter any issues during cancellation.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div class="faq-container" role="region" aria-label="Cancel fuboTV Subscription FAQ">
+  <div class="faq-grid">
+    
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer1" id="faq1">
+      <div class="question">
+        How do I start canceling my fuboTV subscription?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer1" aria-labelledby="faq1">
+        Log into your fuboTV account on their website or app, then go to your account settings to find the subscription cancellation option.
+      </div>
+    </div>
+
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer2" id="faq2">
+      <div class="question">
+        Will I still have access after canceling?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer2" aria-labelledby="faq2">
+        Yes, you can usually watch fuboTV until the end of your current billing period even after cancellation.
+      </div>
+    </div>
+
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer3" id="faq3">
+      <div class="question">
+        How will I know if my subscription is successfully canceled?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer3" aria-labelledby="faq3">
+        You will receive a confirmation email from fuboTV verifying your cancellation.
+      </div>
+    </div>
+
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer4" id="faq4">
+      <div class="question">
+        Can I cancel via third-party platforms like Apple or Roku?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer4" aria-labelledby="faq4">
+        If you subscribed through a third-party platform, cancellation must be done through their subscription management, such as Apple App Store or Roku settings.
+      </div>
+    </div>
+
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer5" id="faq5">
+      <div class="question">
+        What if I get charged after cancellation?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer5" aria-labelledby="faq5">
+        Contact fuboTV customer support immediately if you notice any unexpected charges after cancelling your subscription.
+      </div>
+    </div>
+
+    <div class="faq-item" tabindex="0" role="button" aria-expanded="false" aria-controls="answer6" id="faq6">
+      <div class="question">
+        Can I resubscribe after canceling?
+        <span class="arrow">▶</span>
+      </div>
+      <div class="answer" id="answer6" aria-labelledby="faq6">
+        Absolutely! You can always resubscribe to fuboTV anytime after cancellation without penalty.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+  // FAQ toggle logic
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle current
+      if (!isActive) {
+        item.classList.add('active');
+        item.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Enable keyboard toggle (Enter or Space)
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.click();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
